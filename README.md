@@ -283,7 +283,9 @@
 
 ## 八、Vue生命周期
     vue实例从创建到销毁的过程，称为生命周期，共有八个阶段
-    ![Alt text](https://github.com/JenClint/NOTE/blob/master/img/lifecycle.png)
+  <img src="https://github.com/JenClint/NOTE/blob/master/img/lifecycle.png" width = "50%" />
+  
+  ![lifecycle](https://github.com/JenClint/NOTE/blob/master/img/lifecycle.png)
     
 
 ## 九、计算属性
