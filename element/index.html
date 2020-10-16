@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="app">
+        <div class="block">
+            <span class="demonstration">默认</span>
+            <el-date-picker
+                v-model="value1"
+                type="date"
+                placeholder="选择日期">
+            </el-date-picker>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {	
+                    options:{
+                        // 禁用日期通过 disabledDate 设置
+                        // disabledDate(time) {
+                        // 	return time.getTime() > Date.now();
+                        // },
+                        // firstDayOfWeek:1  //设置日起开始为星期一
+                    },
+                value:'',
+                }
+            },
+        })
+        
+    </script>
+</body>
+</html>
