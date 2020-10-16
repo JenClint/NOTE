@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>Hello</title>
+</head>
+<body>
+    <div id="app">
+        <el-button @click="visible = true">Button</el-button>
+        <el-dialog :visible.sync="visible" title="Hello world">
+          <p>By SG</p>
+        </el-dialog>
+        <br>
+        <br>
+        <el-date-picker
+            v-model="value1"
+            type="date"
+            placeholder="选择日期">
+        </el-date-picker>
+        
+        <el-select v-model="value2" style="margin-left: 30px;"placeholder="请选择">
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :disabled="item.disabled"  
+              :value="item.value2">
+            </el-option>
+        </el-select>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    visible: false ,
+                    value1:"",
+                    options: [{
+                            value2: '选项1',
+                            label: '黄金糕'
+                        }, {
+                            value2: '选项2',
+                            label: '双皮奶',
+                            // disabled: true   //禁用设置
+                        }, {
+                            value2: '选项3',
+                            label: '蚵仔煎'
+                        }, {
+                            value2: '选项4',
+                            label: '龙须面'
+                        }, {
+                            value2: '选项5',
+                            label: '北京烤鸭'
+                        }],
+                        value2: ''
+                }
+            },
+        })
+    </script>
+</body>
+</html>
